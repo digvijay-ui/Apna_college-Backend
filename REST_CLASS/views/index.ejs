@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Quora Posts</h1>
+
+<% for(let post of posts) { %>
+  <div class="post">
+    <h3><%= post.username %></h3>
+    <p><%= post.content %></p>
+    <a href="/posts/<%= post.id %>">View More</a> <!-- ✅ THIS LINE -->
+  </div>
+<% } %>
+
+</body>
+</html>
